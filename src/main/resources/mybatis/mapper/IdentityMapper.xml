@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo1.dao.mapper.IdentityMapper">
+    
+    <resultMap id="identityResultMap" type="com.example.demo1.domain.Identity">
+        <id property="id" column="id" />
+        <result property="address" column="address" />
+        <result property="occupation" column="occupation" />
+        <result property="phone" column="tel" />
+    </resultMap>
+
+    <select id="findById" resultMap="identityResultMap">
+        select * from identity where id = #{id}
+    </select>
+
+</mapper>
