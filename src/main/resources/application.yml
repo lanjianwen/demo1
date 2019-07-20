@@ -6,10 +6,11 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
 
 mybatis:
-  configuration:
-    #配置项：开启下划线到驼峰的自动转换。作用：将数据库字段根据驼峰规则自动注入到对象属性
-    map-underscore-to-camel-case: true
+#   不能同时指定配置文件，又配置mybatis
+#  configuration:
+#    #配置项：开启下划线到驼峰的自动转换。作用：将数据库字段根据驼峰规则自动注入到对象属性
+#    map-underscore-to-camel-case: true
     #指定xml配置文件路径
-    config-location: classpath:mybatis/mybatis-config.xml
+  config-location: classpath:mybatis/mybatis-config.xml
     #指定mapper映射文件路径
-    mapper-locations: classpath:mybatis/mapper/*.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
